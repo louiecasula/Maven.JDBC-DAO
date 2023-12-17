@@ -1,0 +1,26 @@
+CREATE SCHEMA dictionary;
+
+CREATE TABLE word_info (
+        word_id BIGINT,
+        language_id INT,
+        word TEXT,
+        definition TEXT,
+        example_sentence TEXT,
+        pronunciation TEXT,
+        etymology TEXT
+    );
+
+INSERT INTO word_info (word_id, language_id, word, definition, example_sentence, pronunciation, etymology)
+VALUES (1, 1, 'Serendipity', 'The occurrence and development of events by chance in a happy or beneficial way.', 'We met each other by serendipity and became lifelong friends.', 'seh-ren-dip-i-tee', 'Serendip (also Serendib), attested by 1708 in English, is an old name for Ceylon (modern Sri Lanka), from Arabic Sarandib, from Sanskrit Simhaladvipa "Dwelling-Place-of-Lions Island."');
+
+INSERT INTO word_info (word_id, language_id, word, definition, example_sentence, pronunciation, etymology)
+VALUES (2, 2, 'Amistad', 'Friendship', 'La amistad verdadera es un tesoro invaluable.', 'ah-mees-tahd', 'Latin origin');
+
+INSERT INTO word_info (word_id, language_id, word, definition, example_sentence, pronunciation, etymology)
+VALUES (3, 3, 'Gelato', 'Italian-style ice cream.', 'Durante l estate, mi piace mangiare gelato tutti i giorni.', 'je-la-to', 'Latin origin');
+
+INSERT INTO word_info (word_id, language_id, word, definition, example_sentence, pronunciation, etymology)
+VALUES (4, 4, 'Sakura', 'Cherry blossoms.', 'Hanami wa sakura no tame ni aru.', 'sah-koo-rah', 'Japonic origin');
+
+INSERT INTO word_info (word_id, language_id, word, definition, example_sentence, pronunciation, etymology)
+VALUES (5, 5, 'Gemütlichkeit', 'A feeling of comfort, coziness, and warmth.', 'Das Oktoberfest ist bekannt für seine Gemütlichkeit.', 'ge-moot-likh-kite', 'Germanic origin');
