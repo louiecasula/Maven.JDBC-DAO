@@ -1,5 +1,7 @@
 package daos;
 import com.mysql.jdbc.Driver;
+import models.WordInfo;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -31,8 +33,18 @@ public class ConnectionFactory {
     /**
      * Test Connection
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         Connection connection = ConnectionFactory.getConnection();
+        WordInfoDAO wid = new WordInfoDAO();
+        System.out.println(wid.findAll());
+        WordInfo dog = new WordInfo(6, 1, "Dog", "Man's best friend", "I got dat dog in me.", "dawg", "Da dawg house");
+        wid.create(dog);
+        System.out.println(wid.findById(6));
+        WordInfo doggy = new WordInfo(6, 1, "Doggy", "Man's best friend", "I got dat dog in me.", "dawg", "Da dawg house");
+        wid.update(doggy);
+        System.out.println(wid.findById(6));
+        wid.delete(6);
+        System.out.println(wid.findAll());
     }
 
 }

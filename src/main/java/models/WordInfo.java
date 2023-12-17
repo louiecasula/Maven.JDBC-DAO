@@ -86,4 +86,9 @@ public class WordInfo {
     public void setEtymology(String etymology) {
         this.etymology = etymology;
     }
+
+    @Override
+    public String toString() {
+        return "word: " + word;
+    }
 }
