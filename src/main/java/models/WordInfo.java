@@ -22,15 +22,6 @@ public class WordInfo {
         this.etymology = etymology;
     }
 
-    public WordInfo(Integer languageID, String word, String definition, String exampleSentence, String pronunciation, String etymology) {
-        this.languageID = languageID;
-        this.word = word;
-        this.definition = definition;
-        this.exampleSentence = exampleSentence;
-        this.pronunciation = pronunciation;
-        this.etymology = etymology;
-    }
-
     public Integer getWordID() {
         return wordID;
     }
